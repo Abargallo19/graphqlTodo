@@ -10,7 +10,6 @@ const port = process.env.PORT || 8000;
 
 app.use('/graphql', graphqlHTTP({
     schema, 
-    graphql: process.env.NODE_ENV === 'development'
+    graphiql: process.env.NODE_ENV === 'development'
 }));
 app.listen(port, console.log(`Locked & loaded on port ${port}`));
-console.log("Checking for breaks")
