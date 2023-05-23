@@ -1,5 +1,6 @@
 const express = require('express');
+require('dotenv').config();
 const app = express();
-const PORT = 800;
-app.listen(PORT, console.log(`Locked & loaded on port ${PORT}`));
-console.log("Fully functional thus far")
+const port = process.env.PORT || 8000;
+app.listen(port, console.log(`Locked & loaded on port ${port}`));
+
